@@ -1,0 +1,51 @@
+.first{
+ text-align: center;
+ padding: 12px;
+ background-color: lightblue;
+ 
+}
+.second{
+ padding: 12px;
+ background-color: rgb(255, 255, 179);
+  padding: 65px;
+ padding-left: 500px;
+ border: 1px solid black;
+}
+.third{
+ text-align: center;
+ background-color: rgb(153, 187, 255);
+  padding: 60px;
+ 
+}
+body{
+border: 2px solid black;
+
+}
+  
+.marq{
+	color: red;
+	padding: 5px;
+	  font-style: italic;
+	
+}
+#customers tr td{
+	margin: 6px;
+	padding: 5px;
+}
+.alert {
+  padding: 3px;
+  background-color: #f44336;
+  color: white;
+  width: 400px;
+  margin-right: 300px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.add{
+	border: 1px solid black;
+	background-color: navy;
+	padding: 3px;
+	color: white;
+}

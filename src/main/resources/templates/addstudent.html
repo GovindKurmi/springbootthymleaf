@@ -1,0 +1,56 @@
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/css/addstudent.css}" rel="stylesheet" />
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="inst">
+<h4 style="text-align: center;padding-top: 20px">Add Student</h4>
+<form th:action="@{/addstudent}" method="post" th:object="${student}">
+<table>
+<tr><th>Roll Number:</th><th>Name:</th><th>Father Name:</th></tr>
+<tr>
+<td><input type="text" class="form-control" name="rollno"></td>
+<td><input type="text" class="form-control" name="name"></td>
+<td><input type="text" class="form-control" name="fatherName"></td>
+</tr>
+<tr class="error"><td th:if="${#fields.hasErrors('rollno')?'not be null':''}" ></td>
+<td><p th:if="${#fields.hasErrors('name')?'name':''}" th:errors="*{name}"></p></td>
+<td><p th:if="${#fields.hasErrors('fatherName')?'fatherName':''}" th:errors="*{fatherName}"></p></td></tr>
+<tr><th><p>Subject Marks : </p></th></tr>
+<tr><th>Hindi :</th><th>English :</th><th>Chemistry :</th></tr>
+<tr>
+<td><input type="text" class="form-control" name="hindi"></td>
+<td><input type="text" class="form-control" name="english"></td>
+<td><input type="text" class="form-control" name="chemistry"></td>
+</tr>
+<tr class="error"><td><p th:if="${#fields.hasErrors('hindi')?'hindi':''}" th:errors="*{hindi}"></p></td>
+<td><p th:if="${#fields.hasErrors('english')?'english':''}" th:errors="*{english}"></p></td>
+<td><p th:if="${#fields.hasErrors('chemistry')?'chemistry':''}" th:errors="*{chemistry}"></p></td></tr>
+<tr><th>Physics :</th><th>Maths :</th><th>Chemistry Practical :</th></tr>
+<tr>
+<td><input type="text" class="form-control" name="physics"></td>
+<td><input type="text" class="form-control" name="maths"></td>
+<td><input type="text" class="form-control" name="cpracticle"></td>
+</tr>
+<tr class="error"><td><p th:if="${#fields.hasErrors('physics')?'physics':''}" th:errors="*{physics}"></p></td>
+<td><p th:if="${#fields.hasErrors('maths')?'maths':''}" th:errors="*{maths}"></p></td>
+<td><p th:if="${#fields.hasErrors('cpracticle')?'cpracticle':''}" th:errors="*{cpracticle}"></p></td></tr>
+<tr><th>Physics Practical :</th><th>Application Number :</th></tr>
+<tr>
+<td><input type="text" class="form-control" name="ppracticle"></td>
+<td><input type="text" class="form-control" name="application"></td>
+<td><input type="submit" class="form-control" value="Submit"></td>
+</tr>
+<tr class="error"><td><p th:if="${#fields.hasErrors('ppracticle')?'ppracticle':''}" th:errors="*{ppracticle}"></p></td>
+<td><p th:if="${#fields.hasErrors('application')?'application':''}" th:errors="*{application}"></p></td>
+</table>
+</form>
+</div>
+</body>
+</html>

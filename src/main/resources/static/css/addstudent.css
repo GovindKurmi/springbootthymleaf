@@ -1,0 +1,37 @@
+.inst{
+	border:1px solid #d9d9d9;
+	margin-left: 160px;
+    margin-top:15px;
+	height: 540px;
+	width: 900px;
+}
+tr td{
+	padding:3px;
+	padding-left:40px;
+}
+tr th{
+	font-weight: normal;
+	padding-left: 43px;
+	padding-top: 10px;
+	font: none;
+}
+input[type="text"]{
+border:1px solid blck;
+padding: 5.5px;	
+width:240px;
+}
+input[type="submit"]{
+	background-color: green;
+	color: white;
+	font-weight: bold;
+	
+}
+tr th p{
+	padding-top:10px;
+	font-weight: bold;
+	color: #004040;
+}
+.error{
+	color: red;
+	font-size: small;
+}

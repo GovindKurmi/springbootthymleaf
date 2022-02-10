@@ -1,0 +1,110 @@
+<html xmlns:th="https://thymeleaf.org">   
+<head>
+<title>Result</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript"></script>
+  <style type="text/css">
+  .first{
+  width: 300px;
+  }
+  .second{
+  text-align: center;
+ padding: 2px;
+ background-color: lightblue;
+  }
+  footer {
+  text-align: center;
+  padding: 1px;
+  background-color: DarkSalmon;
+  color: white;
+}
+  </style>
+</head> 
+<body>
+<div class="second">
+<p><b>BOARD OF SECONDARY EDUCATION, Madhya Pradesh</b></p>
+ <p>(Examination Results - 2021) </p>
+</div>
+<div  class="container">
+<div class="first">
+   <table class="table ">
+      <tr>
+        <th>Student Name:</th>
+        <th th:text="${student.name}"></th>
+      </tr>
+      <tr>
+        <th>Father Name:</th>
+        <th th:text="${student.fatherName}"></th>
+      </tr>
+      </table></div>
+       <h4> <span>Result: </span><span th:text="${marks.result}"></span></h4>
+ <div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Subject code</th>
+        <th>Subject Name</th>
+        <th>Theory Marks</th>
+        <th>Practical Marks</th>
+        <th>Total Marks</th>
+        <th>Remarks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>501</td>
+        <td>Hindi</td>
+        <td><p th:text="${student.hindi}"></p></td>
+        <td></td>
+        <td><p th:text="${student.hindi}"></p></td>
+        <td th:if="${student.hindi}>75"><p th:text="${marks.remark}"></p></td>
+      </tr>
+      <tr>
+        <td>502</td>
+        <td>English</td>
+        <td><p th:text="${student.english}"></p></td>
+         <td></td>
+         <td><p th:text="${student.english}"></p></td>
+         <td th:if="${student.english}>75"><p th:text="${marks.remark}"></p></td>
+      </tr>
+      <tr>
+        <td>503</td>
+        <td>Chemistry</td>
+        <td><p th:text="${student.chemistry}"></p></td>
+        <td><p th:text="${student.cpracticle}"></p></td>
+        <td><p th:text="${marks.cmarks}"></p></td>
+        <td th:if="${marks.cmarks}>75"><p th:text="${marks.remark}"></p></td>
+      </tr>
+      <tr>
+        <td>504</td>
+        <td>Physics</td>
+        <td><p th:text="${student.physics}"></p></td>
+        <td><p th:text="${student.ppracticle}"></p></td>
+        <td><p th:text="${marks.pmarks}"></p></td>
+        <td th:if="${marks.pmarks}>75"><p th:text="${marks.remark}"></p></td>
+      </tr>
+      <tr>
+        <td>505</td>
+        <td>Maths</td>
+        <td><p th:text="${student.maths}"></p></td>
+        <td></td>
+        <td><p th:text="${student.maths}"></p></td>
+        <td th:if="${student.maths}>75"><p th:text="${marks.remark}"></p></td>
+      </tr>
+      <tr>
+      <th>Percentage:</th><th> <span th:text="${marks.percentage}"></span>%</th>
+     <th> GrandTotal:</th><th> <span th:text="${marks.grandTotal}"></span>/500</th>
+      <th> Grade:</th><th th:text="${marks.grade}"></th>
+      </tr>
+    </tbody>
+  </table>
+</div></div><footer>
+ <p>Author: Govind Kurmi<br>
+  <a href="www.mpresult.com">www.mpresult.com</a></p>
+</footer>
+</body>    
+</html>  

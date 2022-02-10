@@ -1,0 +1,56 @@
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<title>Index Page</title>
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="first">
+		<p>
+			<b>BOARD OF SECONDARY EDUCATION, Madhya Pradesh</b>
+		</p>
+		<p>(Examination Results - 2021)</p>
+	</div>
+	<div class="marq">
+		<marquee>WELCOME TO BOARD OF SECONDARY EDUCATION,MADHYA
+			PRADESH</marquee>
+	</div>
+	<div class="second">
+		<div>
+			<span class="alert"
+				onclick="this.parentElement.style.display='none';" role="alert"
+				th:text="${error}" th:if="${error}">&times;</span>
+		</div>
+		<form action="viewresult" method="post">
+			<table id="customers">
+				<tr>
+					<td><label for="rollno">Enter Roll No.</label></td>
+					<td><input type="text" name="rollno"
+						placeholder="Enter Roll Number"></input></td>
+				</tr>
+				<tr>
+					<td><label for="application">Enter Application No.</label></td>
+					<td><input type="text" name="application"
+						placeholder="Enter Application Number"></input></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Submit"></input></td>
+					<td><a class="add" href="getstudent">Add Student</a></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div class="third">
+		<pre>Hosted By National Informatics Centre (NIC)
+Data Provided By Board of Secondary Education, Madhya Pradesh</pre>
+	</div>
+</body>
+</html>
